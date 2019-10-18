@@ -5,7 +5,7 @@
 .promo__wrap {
   position: absolute;
   top: 0;
-  bottom: 0;
+//  bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
@@ -64,6 +64,7 @@
     left: 0;
     right: 0;
     background-color: rgba(255, 203, 3, 0.3);
+    mix-blend-mode: darken;
   }
 }
 
@@ -80,6 +81,7 @@
   background-size: 8px 12px;
   background-position: center;
   border-radius: 3px;
+  outline: none;
 }
 
 .swiper-button-prev {
@@ -89,4 +91,21 @@
 
 .swiper-button-next {
   right: ~"calc(50% - 40px)";
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.3;
+  background-image: url(../img/icons/next-black.svg);
+  transform: none;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  transform: rotate(180deg);
+}
+
+.promo__next.swiper-button-disabled,
+.promo__prev.swiper-button-disabled {
+  background-image: url(../img/icons/next-white.svg);
+  opacity: 1;
 }
