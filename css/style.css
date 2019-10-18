@@ -496,8 +496,12 @@ button {
   margin-bottom: 15px;
   font-style: italic;
   font-weight: 700;
+  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.logo strong::first-letter {
+  font-size: 16px;
 }
 .logo img {
   display: block;
@@ -1028,4 +1032,122 @@ button {
 .action__more {
   margin-top: auto;
   max-width: 135px;
+}
+.info {
+  margin-bottom: 50px;
+}
+.info p {
+  margin-top: 0;
+}
+.info__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  background-color: #232020;
+  background-image: url(../img/images/bg-footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__shop {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #ffcb03;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.footer__shop::first-letter {
+  font-size: 30px;
+}
+.footer__logo .logo span {
+  font-size: 12px;
+  color: #ffcb03;
+}
+.footer__logo .logo strong {
+  font-size: 12px;
+  color: #ffcb03;
+}
+.footer__logo .logo strong::first-letter {
+  font-size: 14px;
+}
+.footer__logo .logo .logo__img {
+  width: 152px;
+  height: auto;
+}
+.footer__comment {
+  font-size: 13px;
+}
+.footer__block {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  padding-left: 35px;
+  border-left: 1px dashed #ffcb03;
+}
+.footer__block--contacts {
+  padding-right: 100px;
+}
+.footer__block--contacts p {
+  margin-top: 0;
+}
+.footer__block .social {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.footer__block .social__item {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.footer__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #ffcb03;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.footer__nav li {
+  margin-bottom: 12px;
+}
+.footer__nav a:hover,
+.footer__nav a:active {
+  text-decoration: underline;
+}
+.footer__time span,
+.footer__mail a,
+.footer__phone a {
+  display: block;
+  color: #ffcb03;
+}
+.footer__time span,
+.footer__phone a {
+  font-weight: 700;
+}
+.footer__mail a:hover,
+.footer__phone a:hover,
+.footer__mail a:active,
+.footer__phone a:active {
+  text-decoration: underline;
 }
