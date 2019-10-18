@@ -31,3 +31,53 @@
     .transition();
   }
 }
+
+.header-internal {
+  position: relative;
+  background-color: @yellow;
+  background-image: url(../img/images/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  
+  .logo {
+    padding-top: 0;
+  }
+  
+  .header__wrap {
+    padding-top: 10px;
+  }
+  
+  .header__contacts,
+  .search,
+  .menu {
+    padding-top: 30px;
+  }
+  
+  .menu__item {
+    color: @black;
+    
+    &:hover,
+    &:active,
+    &--active {
+      color: #fff;
+    }
+  }
+  
+  .header__phone {
+    color: @black;
+    
+    &:hover,
+    &:active {
+      color: #fff;
+    }
+  }
+  
+  .search__input {
+    border: 1px solid @black;
+  }
+  
+  .header__contacts {
+    margin-left: 90px;
+  }
+}

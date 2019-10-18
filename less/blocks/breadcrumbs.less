@@ -1,0 +1,30 @@
+.breadcrumbs {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.breadcrumbs__link {
+  font-size: 12px;
+}
+
+a.breadcrumbs__link {
+  margin-right: 5px;
+  .transition();
+  
+  &::after {
+    content: "\2192";
+    margin-left: 5px;
+    color: @yellow;
+  }
+  
+  &:hover,
+  &:active {
+    color: @yellow;
+    .transition();
+  }
+}
+
+span.breadcrumbs__link {
+  color: #9f9d9d;
+}
