@@ -17,6 +17,14 @@
 .action__link {
   width: 100%;
   display: block;
+  
+  &:hover,
+  &:active {
+    .action__title {
+      color: @blue;
+      .transition();
+    }
+  }
 }
 
 .action__img {
@@ -41,6 +49,7 @@
   font-size: 17px;
   font-weight: 700;
   text-transform: uppercase;
+  .transition();
 }
 
 .action__wrap {
