@@ -11,3 +11,9 @@ if (window.innerWidth < 1170) {
     $('.menu').removeClass('menu--opened');
   });
 };
+
+if (window.innerWidth < 766) {
+  $('.footer__title').click(function() {
+    $(this).next().slideToggle();
+  });
+};
