@@ -1781,7 +1781,7 @@ span.pages__link {
           flex: 0 0 auto;
 }
 .gallery-thumbs {
-  height: 52px;
+  height: 78px;
   margin-bottom: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1792,10 +1792,10 @@ span.pages__link {
           justify-content: center;
 }
 .gallery-thumbs .swiper-slide {
-  width: 80px;
+  width: 112px;
   height: 100%;
   opacity: 1;
-  padding: 10px;
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1810,6 +1810,12 @@ span.pages__link {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   opacity: 0.5;
+}
+.gallery-thumbs .swiper-slide img {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 .gallery-thumbs .swiper-slide-thumb-active {
   border-color: #ffcb03;
@@ -1827,7 +1833,7 @@ span.pages__link {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 .card__title {
   width: 555px;
@@ -1838,7 +1844,7 @@ span.pages__link {
 }
 .card__price {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #333b44;
   font-size: 40px;
   font-weight: 700;
@@ -1881,10 +1887,15 @@ span.pages__link {
   text-transform: uppercase;
   border-radius: 5px 5px 5px 0;
 }
+.tabs {
+  overflow: hidden;
+  margin-bottom: 55px;
+}
 .tabs__title {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1900,10 +1911,22 @@ span.pages__link {
 .tabs__title .ui-tabs-active::before {
   display: block;
 }
+.tabs__title::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100vw;
+  background-color: #f2f2f2;
+}
 .tabs__name {
   position: relative;
   color: #333b44;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
@@ -1912,6 +1935,9 @@ span.pages__link {
   display: block;
   padding: 20px;
   outline: none;
+}
+.tabs__name a::first-letter {
+  font-size: 20px;
 }
 .tabs__name::before {
   display: none;
@@ -1924,13 +1950,14 @@ span.pages__link {
   background-color: #ffcb03;
 }
 .tabs__header {
+  margin-bottom: 35px;
   text-align: center;
   color: #333b44;
   font-size: 24px;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
 }
 .tabs__header::first-letter {
   font-size: 30px;
@@ -1949,8 +1976,8 @@ span.pages__link {
 }
 .tabs__field table td {
   padding-left: 70px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   vertical-align: top;
 }
 .tabs__field table td:first-child {
@@ -2087,6 +2114,14 @@ span.pages__link {
   .catalog__list {
     margin-right: 0;
   }
+  .card__title-wrap {
+    left: 15px;
+    right: 15px;
+  }
+  .tabs__field table td {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 @media (max-width: 1022px) {
   .logo img {
@@ -2181,6 +2216,25 @@ span.pages__link {
   .about__item {
     margin-right: 0;
     margin-left: 0;
+  }
+  .card__title-wrap {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .card__title,
+  .card__price-wrap {
+    width: 100%;
+  }
+  .card__btn {
+    width: 195px;
+  }
+  .card__slide {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .gallery-top {
+    height: 600px;
   }
 }
 @media (max-width: 766px) {
@@ -2327,5 +2381,14 @@ span.pages__link {
   }
   .about__table table {
     width: 600px;
+  }
+  .gallery-top {
+    height: 250px;
+  }
+  .tabs__field table tr,
+  .tabs__field table td,
+  .tabs__field table tbody,
+  .tabs__field table {
+    display: block;
   }
 }
