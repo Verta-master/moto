@@ -848,6 +848,8 @@ button {
   color: #333b44;
   font-size: 30px;
   font-weight: 700;
+}
+.title-internal--news {
   letter-spacing: 0.1em;
 }
 .btn {
@@ -1673,6 +1675,79 @@ span.pages__link {
   height: 1px;
   background-color: #ffcd01;
 }
+.about {
+  color: #333b44;
+  padding-bottom: 60px;
+}
+.about p {
+  margin-bottom: 20px;
+}
+.about__table {
+  margin-bottom: 55px;
+  border-top: 2px solid #ffcb03;
+}
+.about__table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.about__table table th {
+  padding: 22px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+.about__table table th:first-child {
+  text-align: center;
+}
+.about__table table td {
+  padding: 13px 15px;
+}
+.about__table table tr:nth-child(2n) {
+  background-color: #f3f3f3;
+}
+.about__table table th:first-child,
+.about__table table td:first-child {
+  width: 45%;
+}
+.about__table table b {
+  font-size: 16px;
+}
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+}
+.about__item {
+  margin-left: 83px;
+  margin-right: 83px;
+  margin-bottom: 60px;
+}
+.about__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.about__img img {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
 @media (max-width: 1170px) {
   .wrapper {
     width: 100%;
@@ -1887,6 +1962,14 @@ span.pages__link {
   .filter {
     border: 0;
   }
+  .about__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .about__item {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 @media (max-width: 766px) {
   .footer__nav,
@@ -1972,6 +2055,10 @@ span.pages__link {
     width: 100%;
     padding-top: 30px;
   }
+  .about__table table td:first-child,
+  .about__table table th:first-child {
+    width: auto;
+  }
 }
 @media (max-width: 480px) {
   .promo__slide {
@@ -2021,5 +2108,12 @@ span.pages__link {
   }
   .news__img {
     height: 200px;
+  }
+  .about__table {
+    padding-bottom: 20px;
+    overflow-x: scroll;
+  }
+  .about__table table {
+    width: 600px;
   }
 }
