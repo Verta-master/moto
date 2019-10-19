@@ -205,6 +205,13 @@
   .filter {
     border: 0;
   }
+  .about__list {
+    justify-content: space-around;
+  }
+  .about__item {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 //-------------------------------------------
@@ -280,6 +287,10 @@
     width: 100%;
     padding-top: 30px;
   }
+  .about__table table td:first-child,
+  .about__table table th:first-child {
+    width: auto;
+  }
 }
 
 //-------------------------------------------
@@ -331,5 +342,13 @@
   }
   .news__img {
     height: 200px;
+  }
+  .about__table {
+    padding-bottom: 20px;
+    overflow-x: scroll;
+    
+    table {
+      width: 600px;
+    }
   }
 }
