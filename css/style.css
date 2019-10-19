@@ -1881,6 +1881,85 @@ span.pages__link {
   text-transform: uppercase;
   border-radius: 5px 5px 5px 0;
 }
+.tabs__title {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f2f2f2;
+}
+.tabs__title .ui-tabs-active {
+  color: #ffcb03;
+}
+.tabs__title .ui-tabs-active::before {
+  display: block;
+}
+.tabs__name {
+  position: relative;
+  color: #333b44;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.tabs__name a {
+  display: block;
+  padding: 20px;
+  outline: none;
+}
+.tabs__name::before {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ffcb03;
+}
+.tabs__header {
+  text-align: center;
+  color: #333b44;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.tabs__header::first-letter {
+  font-size: 30px;
+}
+.tabs__field {
+  padding-top: 20px;
+  color: #333b44;
+}
+.tabs__field table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+.tabs__field table tr:nth-child(2n + 1) {
+  background-color: #f2f2f2;
+}
+.tabs__field table td {
+  padding-left: 70px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  vertical-align: top;
+}
+.tabs__field table td:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.tabs__field table td:nth-child(2) {
+  padding-right: 90px;
+}
 @media (max-width: 1170px) {
   .wrapper {
     width: 100%;
