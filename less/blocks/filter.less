@@ -1,0 +1,99 @@
+.filter {
+  border: 1px solid rgb(214, 214, 214);
+  border-radius: 0 5px 5px 5px;
+}
+
+.filter__field {
+  .reset();
+  border: 0;
+}
+
+.filter__option {
+  position: relative;
+  padding: 10px;
+  padding-right: 25px;
+  margin: 0;
+  font-size: 15px;
+  cursor: pointer;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 8px;
+    height: 12px;
+    background-image: url(../img/icons/next-black.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.3;
+    transform: rotate(90deg);
+  }
+  
+  &--opened::after {
+    background-image: url(../img/icons/next-yellow.svg);
+    opacity: 1;
+  }
+}
+
+.filter__drop {
+  display: none;
+  max-height: 190px;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: rgb(248, 248, 248);
+}
+
+.filter__checkbox {
+  display: none;
+}
+
+.checkbox__label {
+  display: block;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  font-size: 12px;
+  color: #6d6a6a;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 6px;
+  }
+}
+
+.filter__checkbox:checked + .checkbox__label::after {
+  display: block;
+}
+
+.filter__btn {
+  width: 100%;
+  display: block;
+}
+
+.nicescroll-cursors {
+  background-color: rgb(255, 203, 3) !important;
+  border-color: rgba(255,255,255,0) !important;
+}

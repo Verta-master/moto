@@ -158,23 +158,26 @@
             <fieldset class="filter__field">
               <p class="filter__option">Максимальный крутящий момент</p>
               <div class="filter__drop">
-                <div class="swiper-container filter__slider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide filter__slide">
-                      <input type="checkbox" id="checkbox01" class="filter__checkbox">
-                      <label for="checkbox01" class="checkbox__label">19 Н•м при 5000 об/мин.</label>
-                      <input type="checkbox" id="checkbox02" class="filter__checkbox">
-                      <label for="checkbox02" class="checkbox__label">51 Н•м при 5000 об/мин.</label>
-                      <input type="checkbox" id="checkbox03" class="filter__checkbox">
-                      <label for="checkbox03" class="checkbox__label">54 Н•м при 4250 об/мин.</label>
-                      <input type="checkbox" id="checkbox04" class="filter__checkbox">
-                      <label for="checkbox04" class="checkbox__label">56 Н•м при 4250 об/мин.</label>
-                      <input type="checkbox" id="checkbox05" class="filter__checkbox">
-                      <label for="checkbox05" class="checkbox__label">60 Н•м</label>
-                    </div>
-                  </div>
-                  <div class="swiper-scrollbar filter__scrollbar"></div>
-                </div>
+                <input type="checkbox" id="checkbox01" class="filter__checkbox" checked>
+                <label for="checkbox01" class="checkbox__label">19 Н•м при 5000 об/мин.</label>
+                <input type="checkbox" id="checkbox02" class="filter__checkbox">
+                <label for="checkbox02" class="checkbox__label">51 Н•м при 5000 об/мин.</label>
+                <input type="checkbox" id="checkbox03" class="filter__checkbox">
+                <label for="checkbox03" class="checkbox__label">54 Н•м при 4250 об/мин.</label>
+                <input type="checkbox" id="checkbox04" class="filter__checkbox">
+                <label for="checkbox04" class="checkbox__label">56 Н•м при 4250 об/мин.</label>
+                <input type="checkbox" id="checkbox05" class="filter__checkbox">
+                <label for="checkbox05" class="checkbox__label">60 Н•м</label>
+                <input type="checkbox" id="checkbox01" class="filter__checkbox" checked>
+                <label for="checkbox01" class="checkbox__label">19 Н•м при 5000 об/мин.</label>
+                <input type="checkbox" id="checkbox02" class="filter__checkbox">
+                <label for="checkbox02" class="checkbox__label">51 Н•м при 5000 об/мин.</label>
+                <input type="checkbox" id="checkbox03" class="filter__checkbox">
+                <label for="checkbox03" class="checkbox__label">54 Н•м при 4250 об/мин.</label>
+                <input type="checkbox" id="checkbox04" class="filter__checkbox">
+                <label for="checkbox04" class="checkbox__label">56 Н•м при 4250 об/мин.</label>
+                <input type="checkbox" id="checkbox05" class="filter__checkbox">
+                <label for="checkbox05" class="checkbox__label">60 Н•м</label>
               </div>
             </fieldset>
             <fieldset class="filter__field">
@@ -384,6 +387,7 @@
                 <label for="checkbox56" class="checkbox__label">Option 2</label>
               </div>
             </fieldset>
+            <button type="submit" class="btn filter__btn">Показать</button>
           </form>
         </div>
       </aside>
@@ -691,18 +695,15 @@
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 
   <!-- Sidebar slider -->
   <script>
-    var swiper = new Swiper('.filter__slider', {
-      direction: 'vertical',
-      slidesPerView: 'auto',
-      freeMode: true,
-      scrollbar: {
-        el: '.filter__scrollbar',
-      },
-      mousewheel: true,
+    $('.filter__drop').niceScroll();
+    $('.filter__option').click(function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass('filter__option--opened');
     });
   </script>
 </body>
