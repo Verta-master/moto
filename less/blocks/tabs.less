@@ -1,6 +1,12 @@
+.tabs {
+  overflow: hidden;
+  margin-bottom: 55px;
+}
+
 .tabs__title {
   .reset();
   list-style: none;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -13,12 +19,24 @@
       display: block;
     }
   }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background-color: rgb(242, 242, 242);
+  }
 }
 
 .tabs__name {
   position: relative;
   color: #333b44;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
@@ -27,6 +45,10 @@
     display: block;
     padding: 20px;
     outline: none;
+    
+    &::first-letter {
+      font-size: 20px;
+    }
   }
   
   &::before {
@@ -42,13 +64,14 @@
 }
 
 .tabs__header {
+  margin-bottom: 35px;
   text-align: center;
   color: #333b44;
   font-size: 24px;
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   
   &::first-letter {
     font-size: 30px;
@@ -72,8 +95,8 @@
     
     td {
       padding-left: 70px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding-top: 9px;
+      padding-bottom: 9px;
       vertical-align: top;
       
       &:first-child {
